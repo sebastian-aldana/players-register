@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+#root {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex,
+.center,
+.vertical {
+  display: flex;
+}
+
+.vertical{
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.cms {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2vw;
+}
+.atras {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15vh;
+  height: 15vh;
+}
+.container {
+  --orange: #e93d31;
+  --yellow: #ffdc0a;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--orange);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.terminos {
+  position: absolute;
+  bottom: 10vh;
+  gap: 4vh;
+}
+.container .boton {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3vh;
+  min-width: 13vh;
+  padding: 1vh;
+  background: var(--yellow);
+  color: var(--orange);
+}
+.registro,
+.pregunta {
+  position: absolute;
+  color: var(--yellow);
+}
+.registro {
+  font-size: 1vh;
+  padding-top: 4vh;
+}
+.form_item {
+  padding: 1.5vh 0vh 2vh 9vh;
+}
+.submit {
+  width: 49.4vh;
+  cursor: pointer;
+}
+.registro span {
+  height: 1.7vh;
+}
+.registro input {
+  color: var(--yellow);
+  margin-top: -1px;
+  border-width: 0px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px var(--yellow) solid;
+  width: 10vh;
+  font-size: 1vh;
+}
+.registro input:focus {
+  outline: none;
+}
+
+.pregunta {
+  padding-left: 34vh;
+  gap: 2vh;
+}
+.enviar {
+  position: absolute;
+  width: 55.4vh;
+  height: 10vh;
+  cursor: pointer;
+  margin-top: 38vh;
+}
+/* The container */
+.check {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 5vh;
+  cursor: pointer;
+  font-size: 3vh;
+  letter-spacing: -0.3vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3vh;
+  width: 3vh;
+  border: 0.5vh var(--yellow) solid;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked ~ .checkmark {
+  color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+  left: 1vh;
+  top: 0;
+  width: 1vh;
+  height: 2vh;
+  border: solid var(--yellow);
+  border-width: 0 0.5vh 0.5vh 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
